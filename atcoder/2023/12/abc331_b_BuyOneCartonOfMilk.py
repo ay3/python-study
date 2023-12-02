@@ -2,21 +2,21 @@
 # B - Buy One Carton of Milk
 
 N, S, M, L = map(int, input().split())
-a = (N + 6 - 1) // 6  # S : 6
-b = (N + 8 - 1) // 8  # M : 8
-c = (N + 12 - 1) // 12 # L : 12
+max_S = N // 6 + 2  # S : 6
+max_M = N // 8 + 2  # M : 8
+max_L = N // 12 + 2 # L : 12
 
 ans = 1000000 # (10 ** 4) * 100
 sum = 0 # 合計の個数
-sum_m = 0 # 合計の金額
+price = 0 # 合計の金額
 
-for i in range(a + 1):
-    for j in range(b + 1):
-        for k in range(c + 1):
+for i in range(max_S):
+    for j in range(max_M):
+        for k in range(max_L):
             sum = 6 * i + 8 * j + 12 * k
             if N <= sum:
-                sum_m = S * i + M * j + L * k
-                if sum_m <= ans:
-                    ans = sum_m
+                price = S * i + M * j + L * k
+                if price <= ans:
+                    ans = price
 
 print(ans)
