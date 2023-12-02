@@ -16,7 +16,6 @@ for i in range(max_S):
             sum = 6 * i + 8 * j + 12 * k
             if N <= sum:
                 price = S * i + M * j + L * k
-                if price <= ans:
-                    ans = price
+                ans = min(ans,price)
 
 print(ans)
