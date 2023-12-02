@@ -6,7 +6,7 @@ max_S = N // 6 + 2  # S : 6
 max_M = N // 8 + 2  # M : 8
 max_L = N // 12 + 2 # L : 12
 
-ans = 1000000 # (10 ** 4) * 100
+ans = max_S * S + max_M * M + max_L * L
 sum = 0 # 合計の個数
 price = 0 # 合計の金額
 
