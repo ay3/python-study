@@ -1,0 +1,11 @@
+# https://leetcode.com/problems/contains-duplicate
+# 217. Contains Duplicate
+
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        s = len(set(nums))
+        n = len(nums)
+        if s == n:
+            return False
+        else:
+            return True
